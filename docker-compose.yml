@@ -1,0 +1,11 @@
+version: '3'
+services:
+  go-100nock:
+    build: .
+    image: go-100nock:1.0
+    container_name: go-100nock
+    volumes:
+      - ./go:/usr/src/go
+    ports:
+      - "3000:8080"
+    command: "tail -F /dev/null"
