@@ -11,10 +11,6 @@ RUN apt-get update && apt-get install -y \
 		less \
 		git-all
 
-ENV PATH "/usr/lib/go-${go_version}/bin/:$PATH" \
-	GOPATH "$HOME/repos/gohome" \
-	GOROOT "/usr/local/go/1.5.3" \
-	GOBIN "$GOPATH/bin" \
-	PATH "$GOBIN:$GOROOT/bin:$PATH"
+ENV PATH "/usr/lib/go-${go_version}/bin/:$PATH"
 
 CMD ["/bin/bash"]
